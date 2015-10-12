@@ -50,6 +50,5 @@ def login(username, maxattempts=3):
             msg = True
         else:
             print fail_msg.format(maxattempts - attempts)
-            msg = False
             attempts += 1
     return msg
