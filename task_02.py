@@ -47,8 +47,8 @@ def login(username, maxattempts=3):
         authorization = authentication.authenticate(username,
                                                     getpass.getpass(prompt))
         if authorization is True:
-            msg = True
+            authorization = True
         else:
             print fail_msg.format(maxattempts - attempts)
             attempts += 1
-    return msg
+    return authorization
